@@ -1,0 +1,156 @@
+body{
+	font-family: sans-serif,Arial;
+	font-weight: 300;
+	background-color:#ccffcc;
+	overflow-x: hidden; /*this makes it impossible to scroll left to right*/
+	overflow-y: scroll;
+	padding-top:3%;
+}
+.center_div{
+	position:relative;
+	width:80%;
+	height:95%;
+	margin: auto;
+	float:center;
+	
+}
+
+.image_div{
+	position:absolute;
+	top:25%;
+	max-width:54%;
+	max-height:50%;
+	float:left;
+}
+.center_image{
+	top: 25%;
+	width:90%;
+        height: auto;
+	display: block;
+	padding-right:5%;
+}
+.user_login_signup_div{
+	position:relative;
+	max-width:45%;
+	float:right;
+	width:45%;
+	height:100%;
+	color:black;
+	text-align:center;
+}
+.user_form{
+	float:left;
+	width:90%;
+	height:95%;
+	background-color:white;
+	border:1px solid #dbdbdb;
+}
+.login_form input{
+	border-radius: 3px;
+	outline: 0;
+	border:1px solid #dbdbdb;
+	background-color: rgba(255,255,255,0.4);
+	width: 80%;
+	padding-top: 9px;
+	padding-right: 8px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+	display:block;
+	margin: 5 auto;/* this will center  it */
+}
+.login_form input:hover{
+	background-color: white;
+}
+.login_form input:focus{
+	background-color: white;
+	width: 300px;
+	color: #53e3a6;
+}
+.login_form #login_button{
+	background-color: #3897f0;
+	outline:0;
+	border:0;
+	padding: 5px 10px;
+	color:white;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 18px;
+	display:block;
+	margin: 30 auto; /* this will center  it */
+}
+#login_button:hover{
+	background-color: #ff006e;
+}
+.signup_form input{
+	outline: 0;
+	border:1px solid #dbdbdb;
+	background-color: rgba(255,255,255,0.4);
+	width:80%;
+	padding-top: 9px;
+	padding-right: 8px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+	display:block;
+	margin: 5 auto;
+}
+.signup_form input:hover{
+	background-color: white;
+}
+.signup_form input:focus{
+	background-color: white;
+	width: 300px;
+	color: #53e3a6;
+}
+#TopRow{
+	text-align:center;
+}
+#TopRow input{
+	width: 39.5%;
+	display: inline-block;
+	float:center;  
+}
+.signup_form .create_account_button{
+	background-color: #3897f0;
+	outline:0;
+	border:0;
+	padding: 5px 10px;
+	color:white;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 18px;
+	display:block;
+	margin: 30 auto; /* this will center  it */
+}
+.signup_form .create_account_button:hover{
+	background-color: #ff006e;
+}
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	overflow:hidden;
+	font-family: sans-serif,Arial;
+	padding-left: 10%;
+	padding-top: 10px;
+	color:black;
+}
+table.foot {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 50%;
+}
+
+table.foot td, th,tr { 
+    	text-align: left;
+    	font-size: 10pt;
+    	padding: 0px;
+   
+}
+#border{
+	border-bottom:1px solid white;
+
+}
+
+

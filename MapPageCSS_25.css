@@ -1,0 +1,425 @@
+body{
+	font-family: sans-serif,Arial;
+	font-weight: 300;
+	background-color:#ccffcc;
+	overflow-x: hidden; /*this makes it impossible to scroll left to right*/
+	overflow-y: scroll;
+	min-width:630px;
+	top:0;
+	right:0;
+	left:0;
+}
+/*Top container: contains logout button and logo*/
+
+.logout_container{
+   	height:10%;
+   	min-height:60px;
+   	min-width:500px;
+   	background-color:white;	
+   	padding-left:6.5%;
+   	padding-right:6.5%;
+}
+.logo{
+	width:50%;
+	height:100%;	
+}
+.logo_image{
+	height:60px;
+	float:left;
+}
+.logo_title{
+	float:left;
+	width:50%;
+	height:100%;
+}
+.logo_title_image{
+	width: auto;
+    height: 60px;
+}
+.logout_container .logout_form{
+	text-align: right;
+	width: 50%;
+	float:right;
+	padding-top:15pt;
+	right:15pt;
+}
+#logout_button{
+	background-color: #3897f0;
+	outline:0;
+	border:0;
+	padding: 5px 10px;
+	color:white;
+	border-radius: 3px;
+	width: 100px;
+	cursor: pointer;
+	font-size: 18px;
+}
+#logout_button:hover{
+	background-color: #ff006e;
+}
+#img_file input[type="file"]{
+    margin-top:10px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    font-size: 100px;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+#img_file{
+    margin-top:10px;
+}	
+.edit_buttons{
+	background-color: #3897f0;
+	outline:0;
+	border:0;
+	padding: 5px 10px;
+	color:white;
+	border-radius: 3px;
+	width: 125px;
+	cursor: pointer;
+	font-size: 18px;
+}
+.edit_buttons:hover{
+	background-color: #ff006e;
+}
+#edit_name_input{
+    width: 250px;
+	height:35px;
+	font-size:12pt;
+}
+#edit_name_input input{
+	border-radius: 3px;
+	outline: 0;
+	border:1px solid #dbdbdb;
+	background-color: rgba(255,255,255,0.4);
+	padding-top: 9px;
+	padding-right: 8px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+	display:block;
+	margin: 5 auto;/* this will center  it */
+}
+#edit_name_input input:hover{
+	background-color: white;
+}
+#edit_name_input input:focus{
+	background-color: white;
+	width: 300px;
+	color: #53e3a6;
+}
+
+/*User section: contains user image and user information*/
+
+.User_Profile{
+	/*background-color:white;*/
+	margin:0 auto;
+	width:45%;
+	min-width:400px;
+	height:210px;
+	padding-top:60px;
+}
+.user_pic_div{
+	width:42%;
+	float:left;
+}
+.user_pic{
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;	
+}
+.user_pic:hover {
+    opacity: 0.7;
+    cursor:pointer;
+    
+}
+.user_info_div{
+	width:57%;
+	height:210px;
+	float:right;
+	text-align:center;
+}
+
+/*Invisible user div*/
+.modal,
+.modal2,.edit_Modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color:rgba(192,192,192,0.7) /* Grey w/ opacity */
+}
+
+/* Modal Content (div) */
+.modal-content,
+.modal2-content{
+    margin: auto;
+    display: block;
+    width: 70%;
+    max-width: 900px;
+    max-height: 1000px;
+    text-align:center;
+}
+.edit_modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    max-height: 1000px;
+    text-align:center;
+    padding-top:50px;
+}
+.edit_add-content,
+.edit_name-content,
+.edit_delete-content{
+    display: none; /* Hidden by default */
+    margin: auto;
+    width: 30%;
+    max-width: 450px;
+    max-height: 450px;
+    min-height:280px;
+    min-width:280px;
+    padding-left:12.5%;
+    padding-top:3%;
+    font-size:larger;
+    color:white;
+    background-size: cover;
+    border-radius: 50px;
+	/*-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;	*/
+}
+.edit_add-content{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color:rgba(255,0,0,0.4);/* Red w/ opacity */ 
+    padding-bottom:25px;
+}
+.edit_name-content{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color:rgba(255,255,0,0.4);/* yellow w/ opacity */     
+}
+.edit_delete-content{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color:rgba(192,192,192,0.4);/* Grey w/ opacity */     
+}
+
+/* Modal Content (image) */
+.m-content,.m2-content{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 620px;
+}
+.edit-content{
+    width: 30%;
+    margin:5px;
+    min-width:60px;
+}
+.edit-content:hover{
+    opacity: 0.7;
+    cursor:pointer;
+}
+/* Add Animation */
+.modal-content,
+.modal2-content,
+.edit_modal-content,
+.edit_add-content,
+.edit_name-content,
+.edit_delete-content{    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close,
+.close2,
+.edit_close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus,
+.close2:hover,
+.close2:focus,
+.edit_close:hover,
+.edit_close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+#change_user_profile_button{
+	background-color: #3897f0;
+	outline:0;
+	border:0;
+	padding: 5px 10px;
+	color:white;
+	border-radius: 3px;
+	width: 160px;
+	cursor: pointer;
+	margin-top:5px;
+	font-size: 18px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+#change_user_profile_button:hover{
+    background-color: #ff006e;
+}
+
+/*Center div: contains map and picture sections*/
+.center_div{
+	padding-top:5%;
+	width:85%;
+	min-width:400px;
+	height:600px;
+	margin-left:5%;
+	margin-right:5%;
+	
+}
+#map_div, #picture_div{
+    height:90%;
+    min-height: 400px;
+    min-width:180px;
+	float:left;
+	background-color:white;
+	border:1px solid #dbdbdb;
+}
+#map_div{
+	width:45%;
+	margin-right:4%;
+	text-align:center;
+	overflow:hidden;
+}
+
+#map{
+    width: 100%; 
+    height: 100%;
+    -webkit-animation: fadeIn 300ms; /* Chrome, Safari, Opera */
+    animation: fadeIn 300ms;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* Standard syntax */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#picture_div{
+	width: 45%;
+	overflow:auto;
+}
+
+#pictures{
+	text-align: center;
+   
+}
+#headers{
+    position: relative;
+    width:100%;
+    height:80px;
+    line-height:80px;
+}
+#headers #pic_p{
+    display: inline;
+    font-size:25pt;
+}
+#edit_add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:80px;
+    width:80px;
+    cursor:pointer;
+}
+
+/*User uploaded images*/
+#marker_pic_div{
+    display:block;
+    margin:0 auto;
+    width:100%;
+    
+}
+#inner_marker_div{
+    width:85%;
+    margin:0 auto;
+    text-align:center;
+   
+}
+.user_images_thumbnail{
+    /*background-color:#ccffcc;*/
+    display: inline-block;
+    padding:5px;
+    margin-left: auto;
+    margin-right: auto;
+    width:250px;
+    height:250px;
+    
+}
+.user_images_thumbnail img{
+    width:100%;
+    height:250px;
+}
+.user_images_thumbnail img:hover {
+    opacity: 0.7;
+    cursor:pointer;
+}
+
+/*footer div: contains language and previous page sections*/
+footer {
+    background-color: #ccffcc;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow:hidden;
+    font-family: sans-serif,Arial;
+    padding-left: 10%;
+    padding-top: 10px;
+}
+table.foot {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table.foot td, th,tr { 
+    text-align: left;
+    font-size: 10pt;
+    padding: 0px;
+   
+}
+#border{
+	border-bottom:1px solid white;
+
+}
+
+
+
+
